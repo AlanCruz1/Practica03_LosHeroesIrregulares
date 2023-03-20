@@ -20,7 +20,7 @@ public class Main {
         Pizza eleccion = new PizzaDosQuesos();
         
 
-        System.out.println("Bienvenido a WaySub"
+        System.out.println("********Bienvenido a WaySub********\n"
                         + "Que va a comer hoy"); 
 
         do {
@@ -148,56 +148,56 @@ public class Main {
 
                             case 1:
                         
-                                System.out.println("Terminando su orden1");
+                                pedido = new Pollo(pedido);
 
                             break;
 
                             case 2:
                         
-                                System.out.println("Terminando su orden2");
+                                pedido = new Pepperoni(pedido);
 
                             break;
 
                             case 3:
                         
-                                System.out.println("Terminando su orden3");
+                                pedido = new Jamon(pedido);
 
                             break;  
 
 
                             case 4:
                         
-                                System.out.println("Terminando su orden4");
+                                pedido = new Lechuga(pedido);
 
                             break;
 
                             case 5:
                         
-                                System.out.println("Terminando su orden5");
+                                pedido = new Jitomate(pedido);
 
                             break;     
 
                             case 6:
                         
-                                System.out.println("Terminando su orden6");
+                                pedido = new Cebolla(pedido);
 
                             break;
 
                             case 7:
                         
-                                System.out.println("Terminando su orden7");
+                                pedido = new Mostaza(pedido);
 
                             break;
 
                             case 8:
                         
-                                System.out.println("Terminando su orden8");
+                                pedido = new Catsup(pedido);
 
                             break;
 
                             case 9:
                         
-                                System.out.println("Terminando su orden9");
+                                pedido = new Mayonesa(pedido);
 
                             break;
 
