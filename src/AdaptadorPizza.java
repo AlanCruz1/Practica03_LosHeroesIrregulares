@@ -27,7 +27,7 @@ public class AdaptadorPizza implements Baguette{
      */
     @Override
     public String getDescripcion() {
-        return "Tipo de carne: " + pizza.getCarne() + " \nTipo de queso: " + pizza.getQueso() + " \nTipo de queso: " + pizza.getMasa();
+        return "Tipo de carne: " + pizza.getCarne() + " \nTipo de queso: " + pizza.getQueso() + " \nTipo de masa: " + pizza.getMasa();
     }
 
     /**
@@ -56,7 +56,7 @@ public class AdaptadorPizza implements Baguette{
      * @throw RuntimeException Una pizza no cuenta pollos
      */
     @Override
-    public int getPepperonnis() {
+    public int getPepperonis() {
         throw new RuntimeException("Una pizza no cuenta pepperonnis");
     }
 
@@ -126,7 +126,7 @@ public class AdaptadorPizza implements Baguette{
      * @throw RuntimeException Una pizza no cuenta catsup
      */
     @Override
-    public int getCatsup() {
+    public int getCatsups() {
         throw new RuntimeException("Una pizza no cuenta catsup");
     }
 
