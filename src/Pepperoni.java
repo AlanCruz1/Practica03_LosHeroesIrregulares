@@ -36,7 +36,7 @@ public class Pepperoni extends Ingredientes{
      * 
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
-    public int getCantidad(){
-        return 1 + chicle.getCantidad();
+    public int getPepperonis(){
+        return 1 + chicle.getPepperonis();
     }
 }

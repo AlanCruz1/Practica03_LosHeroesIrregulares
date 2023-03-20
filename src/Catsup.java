@@ -39,8 +39,8 @@ public class Catsup extends Ingredientes{
      * 
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
-    public int getCantidad(){
-        return 1 + chicle.getCantidad();
+    public int getCatsups(){
+        return 1 + chicle.getCatsups();
     }
 
     

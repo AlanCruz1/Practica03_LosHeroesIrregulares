@@ -18,10 +18,6 @@ public abstract class Ingredientes implements Baguette{
         return chicle.getDescripcion();
     }
 
-    public int getCantidad(){
-        return chicle.getCantidad();
-    }
-
     public double getPrecio(){
         return chicle.getPrecio();
     }

@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -20,12 +21,12 @@ public class Main {
         Pizza eleccion = new PizzaDosQuesos();
         
 
-        System.out.println("********Bienvenido a WaySub********\n"
-                        + "Que va a comer hoy"); 
+        System.out.println("********Bienvenido a WaySub********\n"); 
 
         do {
 
-            System.out.println("\n1. Baguette\n" +
+            System.out.println("Que va a comer hoy" + 
+                            "\n  1. Baguette\n" +
                                 "2. Pizza\n" +
                                 "0. Salir del restaurante\n");
             while(true){
@@ -36,7 +37,7 @@ public class Main {
                     opcion = Integer.parseInt(entrada);
                     break;
 
-                } catch (Exception e) {
+                } catch (NumberFormatException e) {
 
                     System.out.println("\nOpcion invalida\n" +
                     "1. Baguette\n" +

@@ -37,8 +37,8 @@ public class Jamon extends Ingredientes{
      * 
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
-    public int getCantidad(){
-        return 1 + chicle.getCantidad();
+    public int getJamones(){
+        return 1 + chicle.getJamones();
     }
 
 
