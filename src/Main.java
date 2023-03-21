@@ -26,7 +26,7 @@ public class Main {
         do {
 
             System.out.println("Que va a comer hoy" + 
-                            "\n  1. Baguette\n" +
+                            "\n1. Baguette\n" +
                                 "2. Pizza\n" +
                                 "0. Salir del restaurante\n");
             while(true){
@@ -49,15 +49,15 @@ public class Main {
 
             switch(opcion){
                 
-                case 1:
+                case 1: 
                 
                     do {    
-
+                        
                         System.out.println("Que tipo de pan quiere:");    
 
-                        System.out.println("\n1. Pan blanco\n" +
-                                    "2. Pan integral\n" +
-                                    "3. Pan de centeno\n");
+                        System.out.println("\n1. Pan blanco: $20.00\n" +
+                                    "2. Pan ajo: $30.00\n" +
+                                    "3. Pan de centeno: $25:00\n");
 
                         while(true){
 
@@ -68,11 +68,11 @@ public class Main {
 
                             break;
 
-                            } catch (Exception e) {
+                            } catch (NumberFormatException e) {
                                 System.out.println("\nOpcion invalida\n" +
-                                "1. Pan blanco\n" +
-                                "2. Pan integral\n" +
-                                "3. Pan de centeno\n");
+                                "1. Pan blanco: $20.00\n" +
+                                "2. Pan ajo: $30.00\n" +
+                                "3. Pan de centeno: $25.00\n");
                            }
                         }
 
@@ -86,13 +86,13 @@ public class Main {
 
                             case 2:
                         
-                                pedido = new PanCenteno();
+                                pedido = new PanAjo();
 
                             break;
 
                             case 3:
                         
-                                pedido = new PanAjo();
+                                pedido = new PanCenteno();
 
                             break;
 
@@ -107,21 +107,21 @@ public class Main {
                     } while (opcionSe <= 0 || opcionSe >= 4);    
 
                     do{
-
+                         
                         System.out.println("Que le  va a poner a su baguette");    
 
-                        System.out.println("\n1. Pollo\n" +
-                                    "2. Pepperoni\n" +
-                                    "3. Jamon\n" +
-                                    "4. Lechuga\n" +
-                                    "5. Jitomate\n" +
-                                    "6. Cebolla\n" +
-                                    "7. Mostaza\n" +
-                                    "8. Catsup\n" +
-                                    "9. Mayonesa\n" +
+                        System.out.println("\n1. Pollo: $2.00\n" +
+                                    "2. Pepperoni: $1.00\n" +
+                                    "3. Jamon: $0.20\n" +
+                                    "4. Lechuga: $0.10\n" +
+                                    "5. Jitomate: $0.20\n" +
+                                    "6. Cebolla: $0.20\n" +
+                                    "7. Mostaza: $0.10\n" +
+                                    "8. Catsup: $0.10\n" +
+                                    "9. Mayonesa: $0.10\n" +
                                     "0. Terminar orden\n");
 
-                        while(true){
+                            while(true){
 
                             try {
 
@@ -132,90 +132,95 @@ public class Main {
 
                             } catch (Exception e) {
                                 System.out.println("\nOpcion invalida\n" +
-                                    "1. Pollo\n" +
-                                    "2. Pepperoni\n" +
-                                    "3. Jamon\n" +
-                                    "4. Lechuga\n" +
-                                    "5. Jitomate\n" +
-                                    "6. Cebolla\n" +
-                                    "7. Mostaza\n" +
-                                    "8. Catsup\n" +
-                                    "9. Mayonesa\n" +
+                                    "1. Pollo: $2.00\n" +
+                                    "2. Pepperoni: $1.00\n" +
+                                    "3. Jamon: $0.20\n" +
+                                    "4. Lechuga: $0.10\n" +
+                                    "5. Jitomate: $0.20\n" +
+                                    "6. Cebolla: $0.20\n" +
+                                    "7. Mostaza: $0.10\n" +
+                                    "8. Catsup: $0.10\n" +
+                                    "9. Mayonesa: $0.10\n" +
                                     "0. Terminar orden\n");
                            }
                         }
+                        try{
+                            switch(opcionSe){
 
-                        switch(opcionSe){
-
-                            case 1:
+                                case 1:
                         
-                                pedido = new Pollo(pedido);
+                                    pedido = new Pollo(pedido);
 
-                            break;
+                                break;
 
-                            case 2:
+                                case 2:
                         
-                                pedido = new Pepperoni(pedido);
+                                    pedido = new Pepperoni(pedido);
 
-                            break;
+                                break;
 
-                            case 3:
+                                case 3:
                         
-                                pedido = new Jamon(pedido);
+                                    pedido = new Jamon(pedido);
 
-                            break;  
+                                break;  
 
 
-                            case 4:
+                                case 4:
                         
-                                pedido = new Lechuga(pedido);
+                                    pedido = new Lechuga(pedido);
 
-                            break;
+                                break;
 
-                            case 5:
+                                case 5:
                         
-                                pedido = new Jitomate(pedido);
+                                    pedido = new Jitomate(pedido);
 
-                            break;     
+                                break;     
 
-                            case 6:
+                                case 6:
                         
-                                pedido = new Cebolla(pedido);
+                                    pedido = new Cebolla(pedido);
 
-                            break;
+                                break;
 
-                            case 7:
+                                case 7:
                         
-                                pedido = new Mostaza(pedido);
+                                    pedido = new Mostaza(pedido);
 
-                            break;
+                                break;
 
-                            case 8:
+                                case 8:
                         
-                                pedido = new Catsup(pedido);
+                                    pedido = new Catsup(pedido);
 
-                            break;
+                                break;
 
-                            case 9:
+                                case 9:
                         
-                                pedido = new Mayonesa(pedido);
+                                    pedido = new Mayonesa(pedido);
 
-                            break;
+                                break;
 
-                            case 0:
+                                case 0:
                         
-                                System.out.println("Terminando su orden");
+                                    System.out.println("Terminando su orden");
+                                    System.out.println(pedido.getDescripcion());
+                                    System.out.println(pedido.getPrecio());
 
-                            break;  
+
+                                break;  
                             
-                            default:
+                                default:
 
                                 System.out.println("Opcion invalida");
 
-                            break;
+                                break;
 
-                        }           
-
+                            }           
+                        }catch (RuntimeException e) {
+                            System.out.println(e.getMessage());
+                        }
                     } while (opcionSe != 0);
 
                 break;
@@ -226,11 +231,11 @@ public class Main {
   
                         System.out.println("Que pizza va a querer");
 
-                        System.out.println("\n1. Pizza de pepperoni\n" +
-                                    "2. Pizza de salchicha\n" +
-                                    "3. Pizza de dos quesos\n" +
-                                    "4. Pizza de jamon\n" +
-                                    "5. Pizza de tres carnes\n");
+                        System.out.println("\n1. Pizza de pepperoni: $120.2\n" +
+                                    "2. Pizza de salchicha: $120.2\n" +
+                                    "3. Pizza de dos quesos: $100.2\n" +
+                                    "4. Pizza de jamon: $120.2\n" +
+                                    "5. Pizza de tres carnes: $150.2\n");
 
                         while(true){
                             try {
@@ -241,11 +246,11 @@ public class Main {
 
                             } catch (Exception e) {
                                 System.out.println("\nOpcion invalida\n" +
-                                "1. Pizza de pepperoni\n" +
-                                "2. Pizza de salchicha\n" +
-                                "3. Pizza de dos quesos\n" +
-                                "4. Pizza de jamon\n" +
-                                "5. Pizza de tres carnes\n");
+                                "1. Pizza de pepperoni: $120.2\n" +
+                                "2. Pizza de salchicha: $120.2\n" +
+                                "3. Pizza de dos quesos: $100.2\n" +
+                                "4. Pizza de jamon: $120.2\n" +
+                                "5. Pizza de tres carnes: $150.2\n");
                             }
                         }
 

@@ -10,6 +10,10 @@ public class Cebolla extends Ingredientes{
 
     public Cebolla(Baguette chicle){
         super(chicle);
+        if (this.getCebollas() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 cebollas");
+        }
+
     }
 
     /**
@@ -17,8 +21,8 @@ public class Cebolla extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        return chicle.getDescripcion() + ", cebolla";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", cebolla";
     }
 
     /**
@@ -28,7 +32,7 @@ public class Cebolla extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 0.20 + chicle.getPrecio();
+        return 0.20 + this.chicle.getPrecio();
     }
 
     /**
@@ -37,6 +41,6 @@ public class Cebolla extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getCebollas(){
-        return 1 + chicle.getCebollas();
+        return 1 + this.chicle.getCebollas();
     }
 }

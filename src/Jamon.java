@@ -11,6 +11,9 @@ public class Jamon extends Ingredientes{
 
     public Jamon(Baguette chicle){
         super(chicle);
+        if(this.getJamones() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 jamon");
+        }
     }
 
     /**
@@ -18,8 +21,8 @@ public class Jamon extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        return chicle.getDescripcion() + ", Jamon";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", Jamon";
     }
 
     /**
@@ -29,7 +32,7 @@ public class Jamon extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 0.20 + chicle.getPrecio();
+        return 0.20 + this.chicle.getPrecio();
     }
 
     /**
@@ -38,7 +41,7 @@ public class Jamon extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getJamones(){
-        return 1 + chicle.getJamones();
+        return 1 + this.chicle.getJamones();
     }
 
 

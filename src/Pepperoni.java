@@ -10,6 +10,9 @@ public class Pepperoni extends Ingredientes{
 
     public Pepperoni(Baguette chicle){
         super(chicle);
+        if (this.getPepperonis() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 pepperonis");
+        }
     }
 
     /**
@@ -17,7 +20,7 @@ public class Pepperoni extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
+    public String getDescripcion(){
         return chicle.getDescripcion() + ", Pepperoni";
     }
 
@@ -28,7 +31,7 @@ public class Pepperoni extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 1 + chicle.getPrecio();
+        return 1 + this.chicle.getPrecio();
     }
 
     /**
@@ -37,6 +40,6 @@ public class Pepperoni extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getPepperonis(){
-        return 1 + chicle.getPepperonis();
+        return 1 + this.chicle.getPepperonis();
     }
 }

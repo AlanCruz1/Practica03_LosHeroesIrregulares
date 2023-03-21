@@ -10,6 +10,9 @@ public class Catsup extends Ingredientes{
 
     public Catsup(Baguette chicle){
         super(chicle);
+        if(this.getCatsups() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 catsups");
+        }
     }
 
     /**
@@ -17,11 +20,8 @@ public class Catsup extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        String descripcion = ", Catsup";
-        descripcion =  chicle.getDescripcion() +", Catsup";
-        return descripcion;
-        //return chicle.getDescripcion() + ", Catsup";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", catsup";
     }
 
     /**
@@ -31,7 +31,7 @@ public class Catsup extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 0.10 + chicle.getPrecio();
+        return 0.10 + this.chicle.getPrecio();
     }
 
     /**
@@ -40,7 +40,7 @@ public class Catsup extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getCatsups(){
-        return 1 + chicle.getCatsups();
+        return 1 + this.chicle.getCatsups();
     }
 
     

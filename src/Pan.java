@@ -7,7 +7,7 @@
  */
 public class Pan implements Baguette{
 
-    String descripcion;
+    protected String descripcion;
     private double precio;
     private int pollos;
     private int pepperonis;
@@ -24,7 +24,7 @@ public class Pan implements Baguette{
     */
     public Pan(){
 
-         descripcion="Desconocida";
+        this.descripcion="Desconocida";
 
     } 
 

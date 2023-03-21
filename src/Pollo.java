@@ -10,6 +10,9 @@ public class Pollo extends Ingredientes{
 
     public Pollo(Baguette chicle){
         super(chicle);
+        if (this.getPollos() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 pollo");
+        }   
     }
 
     /**
@@ -17,8 +20,8 @@ public class Pollo extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        return chicle.getDescripcion() + ", Pollo";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", Pollo";
     }
 
     /**
@@ -28,7 +31,7 @@ public class Pollo extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 2 + chicle.getPrecio();
+        return 2 + this.chicle.getPrecio();
     }
 
     /**
@@ -37,6 +40,6 @@ public class Pollo extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getPollos(){
-        return 1 + chicle.getPollos();
+        return 1 + this.chicle.getPollos();
     }
 }

@@ -10,6 +10,9 @@ public class Lechuga extends Ingredientes{
 
     public Lechuga(Baguette chicle){
         super(chicle);
+        if (this.getLechugas() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 lechuga");
+        }
     }
 
     /**
@@ -17,8 +20,8 @@ public class Lechuga extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        return chicle.getDescripcion() + ", Lechuga";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", Lechuga";
     }
 
     /**
@@ -28,7 +31,7 @@ public class Lechuga extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 0.10 + chicle.getPrecio();
+        return 0.10 + this.chicle.getPrecio();
     }
 
     /**
@@ -37,6 +40,6 @@ public class Lechuga extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getLechugas(){
-        return 1 + chicle.getLechugas();
+        return 1 + this.chicle.getLechugas();
     }
 }

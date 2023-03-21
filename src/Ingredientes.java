@@ -14,13 +14,9 @@ public abstract class Ingredientes implements Baguette{
         this.chicle = chicle;
     }
 
-    public String getDescripcion(){
-        return chicle.getDescripcion();
-    }
+    public abstract String getDescripcion();
 
-    public double getPrecio(){
-        return chicle.getPrecio();
-    }
+    public abstract double getPrecio();
 
     public int getPollos(){
         return chicle.getPollos();

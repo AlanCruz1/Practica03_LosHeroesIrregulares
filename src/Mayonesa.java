@@ -10,6 +10,9 @@ public class Mayonesa extends Ingredientes{
 
     public Mayonesa(Baguette chicle){
         super(chicle);
+        if (this.getMayonesas() > 3){
+            throw new RuntimeException("No se pueden agregar mas de 3 mayonesa");
+        }
     }
 
     /**
@@ -17,8 +20,8 @@ public class Mayonesa extends Ingredientes{
      * 
      * @return descripcion La decripcion del ingrediente agregado.
      */
-    public String getDescription(){
-        return chicle.getDescripcion() + ", Mayonesa";
+    public String getDescripcion(){
+        return this.chicle.getDescripcion() + ", Mayonesa";
     }
 
     /**
@@ -28,7 +31,7 @@ public class Mayonesa extends Ingredientes{
      * @returnn precio Precio del ingrdiente junto con el precio del chicle.
      */
     public double getPrecio(){
-        return 0.10 + chicle.getPrecio();
+        return 0.10 + this.chicle.getPrecio();
     }
 
     /**
@@ -37,7 +40,7 @@ public class Mayonesa extends Ingredientes{
      * @return cantidad La cantidad de este ingrediente en el pedido.
      */
     public int getMayonesas(){
-        return 1 + chicle.getMayonesas();
+        return 1 + this.chicle.getMayonesas();
     }
     
 
